@@ -1,0 +1,375 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-size: 20px;
+    color: #3F3F3F;
+}
+
+body{
+    background-image: url("img/trombon4k.jpg"); 
+    background-size: cover;
+    overflow-x: hidden;
+}
+
+/* nav menu style */
+
+#responsive-menu{
+    display: none;
+    position: fixed;
+    background-color: #F4F4F4;
+    width: 100vw;
+    height: auto;
+    z-index: 10;
+    padding-top: 85px;
+    text-align: center;
+}
+
+header{
+    display: flex;
+    position: fixed;
+    width: 100vw;
+    background-color: #FCFCFC;
+    align-items: center;
+    justify-content:space-around;
+    height: 85px;
+    padding: 5px;
+    z-index: 10;
+}
+
+header #logo #logo-img{
+    width: 70px;
+    height: auto;
+}
+
+#nav-links{
+    list-style: none;
+}
+
+#nav-links li{
+    display: inline-block;
+    padding: 0 20px;
+}
+
+#nav-links li:hover{
+    transform: scale(1.1) ;
+}
+
+#nav-links li a:hover{
+    color: #E1BF45;
+}
+
+#nav-links li a{
+    text-decoration: none;
+}
+
+#hamb-menu{
+    display: none;
+    width: 40px;
+    height: 40px;
+    background-color: #E1BF45;
+}
+
+#label-hamb-menu{
+    display: none;
+}
+
+#label-hamb-menu:hover{
+    cursor: pointer;
+}
+
+#hamb-menu:checked ~ #responsive-menu {
+    display: block; /* Mostrar cuando el checkbox está marcado */
+    /* flex-direction: column; /* Asegúrate de que se muestre verticalmente */
+    /* left: 0; */
+    transition: all 0.2s ease-in-out;
+}
+
+/* end nav menu style */
+
+/* main area style */
+
+#main-area{
+    width: 100vw;
+    height: 100vh;
+    align-content: center;
+    
+}
+
+#main-contact-area{
+    position: relative;
+    width: 600px;
+    height: auto;
+    text-align: center;
+    margin: 0 auto;
+}
+
+#main-contact-btn{
+    
+    display: none;
+    
+}
+
+#form-email p{
+    font-size: 30px;
+}
+
+#label-btn{
+    position: relative;
+    justify-self: center;
+    align-self: center;
+    width: 65px;
+    height: auto;
+    background-color: #E1BF45;
+    border-radius: 18px;
+    margin: 0 auto;
+    
+}
+
+#email-input{
+    width: 80%;
+    height: 30px;
+    border-radius: 15px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    border: none;
+    text-align: center;
+    font-size: 19px;
+    margin: 20px 0;
+}
+
+/* end main area style */
+
+/* video area styles */
+
+#video-area{
+    width: 100%;
+    height: 600px;
+    justify-content: center;
+    align-content: center;
+}
+
+#video-demo{
+    width: 800px;
+    height: 500px;
+    margin: 0 auto;
+}
+
+/* end video area styles */
+
+/* features area styles */
+
+#features-area{
+    width: 100%;
+    height: auto;
+    padding: 40px 0;
+}
+
+#features-div{
+    width: 50vw;
+    margin: 0 auto;
+}
+
+.feature{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    margin: 50px;
+}
+
+.feature-text{
+    width: 30vw;
+}
+
+/* end features area styles */
+
+
+#prices-area{
+    width: 100%;
+    height: auto;
+
+    align-content: center;
+}
+
+#prices-div{
+    width: 80vw;
+    height: auto;
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+}
+
+.prices{
+    margin: 40px;
+    display: flex;
+    flex-direction: column; 
+    padding: 30px;
+    width: 300px;
+    height: 300px;
+    background-color: #F4F4F4;
+    border-radius: 30px;
+    justify-content: space-around;
+}
+
+.price-text{
+    bottom: 0;
+}
+
+.price-text h6{
+    font-size: 25px;
+}
+
+.price-text h7{
+    font-size: 22px;
+}
+
+.price-text p{
+    font-size: 19px;
+}
+
+/* footer style */
+
+footer{
+    margin-top: 80px;
+    width: 100%;
+    height: auto;
+    background-color: #3F3F3F;
+    padding: 10px 40px;
+}
+
+footer ul{
+    width: 230px;
+    display: flex;
+    justify-content: space-between;
+}
+
+footer ul li{
+    display: inline-block;
+}
+
+footer ul li a{
+    font-size: 17px;
+    color: white;
+    text-decoration: none;
+}
+
+footer span{
+    
+    font-size: 14px;
+    color: rgb(168, 168, 168);
+}
+
+/* end footer style */
+
+
+
+/* mobile */
+
+@media screen and (max-width:768px) {
+
+    /* nav menu responsive */
+    header{
+        padding: 16px;
+        justify-content: space-between;
+    }
+
+    #label-hamb-menu{
+        display: flex;
+    }
+    nav{
+        display: none;
+    }
+
+    #responsive-menu ul li{
+        list-style: none;
+        margin: 30px;
+        border-bottom: 1px rgb(231, 230, 230) solid;
+    }
+    #responsive-menu ul li a{
+        text-decoration: none;
+    }
+
+
+    /* end nav menu responsive */
+
+    /* main section responsive */
+
+    #main-contact-area{
+        width: 400px; 
+    }
+
+    /* end main section responsive */
+
+    /* video demo section responsive */
+    #video-area{
+        width: 100%;
+        height: 300px;
+        justify-content: center;
+        align-content: center;
+    }
+    
+    #video-demo{
+        width: 400px;
+        height: 300px;
+        margin: 0 auto;
+    }
+    /* end video demo section responsive */
+
+    /* features responsive */
+    #features-div{
+        width: 400px;
+        margin: 0 auto;
+
+    }
+    .feature-text{
+        width: 180px;
+    }
+    .feature-text p{
+        font-size: 15px;
+    }
+    /* end features responsive */
+    /* prices responsive */
+    #prices-div{
+        width: 400px;
+        height: auto;
+        display: flex;
+        flex-direction: column; 
+        margin: 0 auto;
+        display: flex;
+        justify-content: center;
+    }
+    
+    .prices{
+        margin: 40px;
+        display: flex;
+        flex-direction: column; 
+        padding: 30px;
+        width: 300px;
+        height: 300px;
+        background-color: #F4F4F4;
+        border-radius: 30px;
+        justify-content: space-around;
+    }
+
+    /* end prices responsive */
+    footer ul{
+        width: 160px;
+        display: flex;
+        justify-content: space-between;
+    }
+
+    footer ul li a{
+        font-size: 15px;
+    }
+    footer span{
+        font-size: 10px;
+    }
+    footer{
+        margin-top: 70px;
+        padding: 10px 20px;
+    }
+
+}
+
+
+/* end mobile */
